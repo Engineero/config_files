@@ -120,7 +120,7 @@ alias ls='ls -aFG'                              # classify files in color
 # alias dir='ls --color=auto --format=vertical'
 # alias vdir='ls --color=auto --format=long'
 alias ll='ls -alhFG'                            # long list
-# alias la='ls -A'                              # all but . and ..
+alias la='ls -A'                              # all but . and ..
 # alias l='ls -CF'                              #
 alias tree='tree -ahFC'                         # tree with file sizes and indicators
 

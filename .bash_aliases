@@ -11,7 +11,7 @@ alias du='du -h'
 # Misc :)
 # alias less='less -r'                          # raw control characters
 # alias whence='type -a'                        # where, of a sort
-alias grep='grep --color=auto'  # show differences in colour
+# alias grep='grep --color=auto'  # show differences in colour
 # alias egrep='egrep --color=auto'  # show differences in colour
 # alias fgrep='fgrep --color=auto'  # show differences in colour
 alias ..='cd ..'  # back up one directory
@@ -30,9 +30,9 @@ alias vpn='sudo tcpdump -i ppp0 -s 0 -B 524288 -w'  # tcpdump for VPN connection
 alias readtcpdump='tcpdump -s 0 -n -e -x -vvv -r'  # read the tcpdump dumpfile (must give a filename *.pcap)
 
 # Some shortcuts for different directory listings
-alias ls='ls -FG'  # classify files in color
-alias ll='ls -alhFG'  # long list
-alias la='ls -AFG'  # all but . and ..
+alias ls='ls -F --color=always'  # classify files in color
+alias ll='ls -alhFG --color=always'  # long list
+alias la='ls -AFG --color=always'  # all but . and ..
 alias sl='ls'
 alias tree='tree -ahFC'  # tree with file sizes and indicators
 

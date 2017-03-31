@@ -63,6 +63,7 @@ autocmd bufnewfile *.cpp,*.cc,*.h,*.hpp so ~/.vim/templates/cpp_template.txt
 autocmd bufnewfile *.cpp,*.cc,*.h,*.hpp exe "1," . 9 . "g/Filename:.*/s//Filename: " .expand("%")
 autocmd bufnewfile *.cpp,*.cc,*.h,*.hpp exe "1," . 9 . "g/Author:.*/s//Author: " .$USERNAME
 autocmd bufnewfile *.cpp,*.cc,*.h,*.hpp exe "1," . 9 . "g/Created:.*/s//Created: " .strftime("%Y-%m-%d")
+nmap ,,, :r~/.vim/templates/cpp_section.txt<CR>
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0

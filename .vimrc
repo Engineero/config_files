@@ -59,10 +59,21 @@ set modelines=1  " check final line for special vim instructions
 " }}}
 
 " Autocommands and key bindings {{{
+" Load template and set filename field in template header as actual file name.
 autocmd bufnewfile *.cpp,*.cc,*.h,*.hpp so ~/.vim/templates/cpp_template.txt
 autocmd bufnewfile *.cpp,*.cc,*.h,*.hpp exe "1," . 9 . "g/Filename:.*/s//Filename: " .expand("%")
-autocmd bufnewfile *.cpp,*.cc,*.h,*.hpp exe "1," . 9 . "g/Author:.*/s//Author: " .$USERNAME
+
+" Set the author depending on what environment variable is set.
+if !empty($USERNAME)
+  autocmd bufnewfile *.cpp,*.cc,*.h,*.hpp exe "1," . 9 . "g/Author:.*/s//Author: " .$USERNAME
+elseif !empty($USER)
+  autocmd bufnewfile *.cpp,*.cc,*.h,*.hpp exe "1," . 9 . "g/Author:.*/s//Author: " .$USER
+endif
+
+" Set creation date as today's date.
 autocmd bufnewfile *.cpp,*.cc,*.h,*.hpp exe "1," . 9 . "g/Created:.*/s//Created: " .strftime("%Y-%m-%d")
+
+" Other static text commands that we want.
 nmap ,,, :r~/.vim/templates/cpp_section.txt<CR>
 " }}}
 

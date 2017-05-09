@@ -17,6 +17,7 @@ filetype indent on  " load filetype-specific indent files
 set wildmenu  " visual autocomplete for command menu
 set lazyredraw  " redraw only when we need to
 set showmatch  " highlight matching [{()}]
+set viewoptions-=options
 " }}}
 
 " Searching {{{
@@ -75,6 +76,10 @@ autocmd bufnewfile *.cpp,*.cc,*.h,*.hpp exe "1," . 9 . "g/Created:.*/s//Created:
 
 " Other static text commands that we want.
 nmap ,,, :r~/.vim/templates/cpp_section.txt<CR>
+
+" Save and load folds automatically when exiting and opening a file.
+autocmd bufwinleave *.* mkview!
+autocmd bufwinenter *.* silent loadview
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0

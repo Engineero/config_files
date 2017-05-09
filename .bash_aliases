@@ -30,11 +30,11 @@ alias vpn='sudo tcpdump -i ppp0 -s 0 -B 524288 -w'  # tcpdump for VPN connection
 alias readtcpdump='tcpdump -s 0 -n -e -x -vvv -r'  # read the tcpdump dumpfile (must give a filename *.pcap)
 
 # Some shortcuts for different directory listings
-alias ls='ls -F --color=always'  # classify files in color
+alias ls='ls -FG --color=always'  # classify files in color
 alias ll='ls -alhFG --color=always'  # long list
 alias la='ls -AFG --color=always'  # all but . and ..
 alias sl='ls'
-alias tree='tree -ahFC'  # tree with file sizes and indicators
+alias tree='tree -ahFCL 3 --dirsfirst'  # tree with file sizes and indicators
 
 # Some shortcuts for servers I might want to talk to
 alias sporkhack='telnet sporkhack.com'  # Play nethack

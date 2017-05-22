@@ -32,6 +32,7 @@ set foldnestmax=10  " max 10 nested folds
 
 " Space opens/closes folds.
 nnoremap <space> za
+nnoremap <S-Space> zA  " open/close all folds below cursor, only works on gvim
 
 " Fold method can be set to marker, manual, expr, syntax, diff, or indent.
 " Run :help foldmethod to find out more.

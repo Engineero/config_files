@@ -4,6 +4,7 @@ syntax enable  " enable syntax highlighting
 " }}}
 
 " Spaces and tabs {{{
+set shiftwidth=2  " controls auto-indenting step
 set tabstop=2  " number of visual spaces per tab
 set softtabstop=2  " number of spaces in tab when editing
 set expandtab  " tabs are spaces

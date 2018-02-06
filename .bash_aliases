@@ -35,7 +35,3 @@ alias ll='ls -alhFG --color=always'  # long list
 alias la='ls -AFG --color=always'  # all but . and ..
 alias sl='ls'
 alias tree='tree -ahFCL 3 --dirsfirst'  # tree with file sizes and indicators
-
-# Some shortcuts for servers I might want to talk to
-alias sporkhack='telnet sporkhack.com'  # Play nethack
-alias mud='telnet slothmud.org 6101'  # Start SlothMUD

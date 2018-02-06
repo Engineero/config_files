@@ -13,7 +13,7 @@ set expandtab  " tabs are spaces
 " UI config {{{
 set number  " show line numbers
 set showcmd  " show command in bottom bar
-set cursorline  " highlight current line
+"set cursorline  " highlight current line
 filetype plugin indent on  " load filetype-specific indent files
 set wildmenu  " visual autocomplete for command menu
 set lazyredraw  " redraw only when we need to
@@ -64,20 +64,22 @@ set modelines=1  " check final line for special vim instructions
 " Autocommands and key bindings {{{
 " Load template and set filename field in template header as actual file name.
 autocmd bufnewfile *.cpp,*.cc,*.h,*.hpp so ~/.vim/templates/cpp_template.txt
-autocmd bufnewfile *.cpp,*.cc,*.h,*.hpp exe "1," . 9 . "g/Filename:.*/s//Filename: " .expand("%")
+autocmd bufnewfile *.py,*.pyc so ~/.vim/templates/py_template.txt
+autocmd bufnewfile *.cpp,*.cc,*.h,*.hpp,*.py,*.pyc exe "1," . 9 . "g/Filename:.*/s//Filename: " .expand("%")
 
 " Set the author depending on what environment variable is set.
 if !empty($USERNAME)
-  autocmd bufnewfile *.cpp,*.cc,*.h,*.hpp exe "1," . 9 . "g/Author:.*/s//Author: " .$USERNAME
+  autocmd bufnewfile *.cpp,*.cc,*.h,*.hpp,*.py,*.pyc exe "1," . 9 . "g/Author:.*/s//Author: " .$USERNAME
 elseif !empty($USER)
-  autocmd bufnewfile *.cpp,*.cc,*.h,*.hpp exe "1," . 9 . "g/Author:.*/s//Author: " .$USER
+  autocmd bufnewfile *.cpp,*.cc,*.h,*.hpp,*.py,*.pyc exe "1," . 9 . "g/Author:.*/s//Author: " .$USER
 endif
 
 " Set creation date as today's date.
-autocmd bufnewfile *.cpp,*.cc,*.h,*.hpp exe "1," . 9 . "g/Created:.*/s//Created: " .strftime("%Y-%m-%d")
+autocmd bufnewfile *.cpp,*.cc,*.h,*.hpp,*.py,*.pyc exe "1," . 9 . "g/Created:.*/s//Created: " .strftime("%Y-%m-%d")
 
 " Other static text commands that we want.
-nmap ,,, :r~/.vim/templates/cpp_section.txt<CR>
+autocmd bufwinenter *.cpp,*.cc,*.hpp,*.hh nmap ,,, :r~/.vim/templates/cpp_section.txt<CR>
+autocmd bufwinenter *.py,*.pyc nmap ,,, :r~/.vim/templates/py_section.txt<CR>
 
 " Save and load folds automatically when exiting and opening a file.
 autocmd bufwinleave *.* mkview!

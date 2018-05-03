@@ -1,21 +1,21 @@
 # Interactive operation...
 alias rm='rm -i'                    # remove with confirmation
 alias srm='srm -izv'                # securely remove with confirmation
-# alias cp='cp -i'
-# alias mv='mv -i'
+#alias cp='cp -i'
+#alias mv='mv -i'
 
 # Default to human readable figures
 alias df='df -h'
 alias du='du -h'
 
 # Misc :)
-# alias less='less -r'                          # raw control characters
-# alias whence='type -a'                        # where, of a sort
-# alias grep='grep --color=auto'  # show differences in colour
-# alias egrep='egrep --color=auto'  # show differences in colour
-# alias fgrep='fgrep --color=auto'  # show differences in colour
+#alias less='less -r'                          # raw control characters
+#alias whence='type -a'                        # where, of a sort
+alias grep='grep --color=auto'  # show differences in colour
+alias egrep='egrep --color=auto'  # show differences in colour
+alias fgrep='fgrep --color=auto'  # show differences in colour
 alias ..='cd ..'  # back up one directory
-alias rsync='rsync -vazu --progress --rsh="ssh -l ntoner"'  # easy rsync
+#alias rsync='rsync -vazu --progress --rsh="ssh -l ntoner"'  # easy rsync
 alias ipython='ipython --pylab'  # start in a good environment for MATALB-like Pythoning!
 alias notebook='jupyter notebook'  # start the ipython notebook environment which is awesome
 alias shred='shred -zvu'  # secure overwrite and delete

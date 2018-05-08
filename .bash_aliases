@@ -15,7 +15,7 @@ alias grep='grep --color=auto'  # show differences in colour
 alias egrep='egrep --color=auto'  # show differences in colour
 alias fgrep='fgrep --color=auto'  # show differences in colour
 alias ..='cd ..'  # back up one directory
-#alias rsync='rsync -vazu --progress --rsh="ssh -l ntoner"'  # easy rsync
+#alias rsync='rsync -vazu --progress --rsh="ssh -l username"'  # easy rsync, replace "username"
 alias ipython='ipython --pylab'  # start in a good environment for MATALB-like Pythoning!
 alias notebook='jupyter notebook'  # start the ipython notebook environment which is awesome
 alias shred='shred -zvu'  # secure overwrite and delete

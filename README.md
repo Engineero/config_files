@@ -1,7 +1,7 @@
-# config_files
-Configuration files, like bashrc, vimrc, and fish functions.
+# Configuration Files
+Configuration files, like bashrc, vimrc, and fish functions, although currently no fish functions.
 
-Basically just copy these files into the appropriate places:
+Just copy these files into the appropriate places:
 
 * ~/.bashrc
 * ~/.bash_aliases

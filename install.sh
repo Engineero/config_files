@@ -1,0 +1,7 @@
+TEST = "$HOME/test"
+mkdir -p -- "$TEST/.vim"
+mkdir -p -- "$TEST/.vim-tmp"
+cp .bashrc "$TEST/.bashrc"
+cp .bash_aliases "$TEST/.bash_aliases"
+cp .vimrc "$TEST/.vimrc"
+cp -R templates "$TEST/.vim/"

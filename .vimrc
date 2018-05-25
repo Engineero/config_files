@@ -86,6 +86,10 @@ autocmd bufwinenter *.py,*.pyc nmap ,,, :r~/.vim/templates/py_section.txt<CR>
 " Save and load folds automatically when exiting and opening a file.
 autocmd bufwinleave *.* mkview!
 autocmd bufwinenter *.* silent loadview
+
+" Flag unnecessary whitespace.
+highlight BadWhitespace ctermbg=red  guibg=darkred
+au BufRead,BufNewFile *.py,*.pyc,*.cpp,*.cc,*.h,*.hpp match BadWhitespace /\s\+$/
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0

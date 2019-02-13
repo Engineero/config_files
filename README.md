@@ -1,7 +1,20 @@
 # Configuration Files
-Configuration files, like bashrc, vimrc, and fish functions, although currently no fish functions.
+Configuration files, like bashrc, vimrc, and fish functions, although currently
+no fish functions.
 
-Just copy these files into the appropriate places:
+---
+## Script install
+Simply run `./install.sh` from within the cloned directory to automatically
+copy files/folders into your home directory. Note that you may need to update
+permissions for this file to allow execution. To do so, run the following from
+within the project directory:
+
+    $ chmod u+x install.sh
+
+---
+## Manual install
+
+To manually install, just copy these files into the appropriate places:
 
 * ~/.bashrc
 * ~/.bash_aliases

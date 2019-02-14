@@ -2,6 +2,10 @@
 Configuration files, like bashrc, vimrc, and fish functions, although currently
 no fish functions.
 
+Note that some of the options in `.bash_aliases` may not be valid on MacOS,
+specifically the `--color=` options for `grep` and various listing commands.
+It is recommended that these  be removed if using these files on a Mac.
+
 ---
 ## Script install
 Simply run `./install.sh` from within the cloned directory to automatically

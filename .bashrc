@@ -22,6 +22,3 @@ PROMPT_COMMAND='PS1X=$(p="${PWD#${HOME}}"; [ "${PWD}" != "${p}" ] && printf "~";
 # Set the actual command prompt with nice color coding.
 #PS1='\u@\h:${PS1X} $ '
 PS1='\e[1;31m\u@\e[1;36m\h:\e[1;35m${PS1X} \e[0m$ '
-
-# Environment variables.
-export GREP_OPTIONS='--color=auto'

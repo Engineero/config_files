@@ -90,6 +90,7 @@ plugins=(
   web-search
   jsontools
   brew
+  virtualenv
   virtualenvwrapper
 )
 
@@ -120,3 +121,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Set up virtualenvwrapper
+export WORKON_HOME=~/.virtualenvwrapper
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+source /usr/local/bin/virtualenvwrapper.sh

@@ -20,6 +20,7 @@ within the project directory:
 
 To manually install, just copy these files into the appropriate places:
 
+* ~/.zshrc
 * ~/.bashrc
 * ~/.bash_aliases
 * ~/.vimrc

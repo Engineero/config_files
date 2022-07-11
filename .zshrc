@@ -99,6 +99,11 @@ plugins=(
   brew
   virtualenv
   virtualenvwrapper
+  chucknorris
+  colorize
+  colored-man-pages
+  vi-mode
+  gitignore
 )
 
 source $ZSH/oh-my-zsh.sh
